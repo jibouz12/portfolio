@@ -1,0 +1,13 @@
+h2 {
+    text-transform: uppercase;
+}
+
+a {
+    color: black;
+    &:link {
+        text-decoration: none;
+    }
+    &:visited {
+        color: black;
+    }
+}

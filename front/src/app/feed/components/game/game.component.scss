@@ -1,0 +1,102 @@
+@import '/src/assets/anim/animation1.scss','/src/assets/anim/animation2.scss', '/src/assets/anim/animation3.scss', '/src/assets/anim/animation4.scss', '/src/assets/anim/animation5.scss', '/src/assets/anim/animation6.scss', '/src/assets/anim/animation7.scss', '/src/assets/anim/animation8.scss', '/src/assets/anim/animation9.scss';
+
+.ecran {
+    width: 426px;
+    height: 240px;
+    margin: 0px auto 10px auto;
+}
+
+.principal {
+    border-radius: 50px;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url('/assets/Plan\ de\ travail\ 1.png');
+    border: black solid 2px;
+    filter: drop-shadow(black 4px 4px 14px);
+}
+
+.animation1 {
+    animation: alexP-JF 7500ms;
+    animation-fill-mode: both;
+}
+
+.animation2 {
+    animation: alexP-JP 7500ms;
+    animation-fill-mode: both;
+}
+
+.animation3 {
+    animation: alexP-JC 7500ms;
+    animation-fill-mode: both;
+}
+
+.animation4 {
+    animation: alexF-JF 7500ms;
+    animation-fill-mode: both;
+}
+
+.animation5 {
+    animation: alexF-JP 7500ms;
+    animation-fill-mode: both;
+}
+
+.animation6 {
+    animation: alexF-JC 7500ms;
+    animation-fill-mode: both;
+}
+
+.animation7 {
+    animation: alexC-JF 7500ms;
+    animation-fill-mode: both;
+}
+
+.animation8 {
+    animation: alexC-JP 7500ms;
+    animation-fill-mode: both;
+}
+
+.animation9 {
+    animation: alexC-JC 7500ms;
+    animation-fill-mode: both;
+}
+
+#audio-1 {
+    display: none;
+}
+
+.pierre {
+    width: 60px;
+    height: 40px;
+    position: relative;
+    left: 45px;
+    top: 75px;
+    background: none;
+    border: none;
+    color: transparent;
+}
+
+.feuille {
+    width: 60px;
+    height: 40px;
+    position: relative;
+    left: 45px;
+    top: 75px;
+    margin-left: 12px;
+    background: none;
+    border: none;
+    color: transparent;
+}
+
+.ciseaux {
+    width: 62px;
+    height: 40px;
+    position: relative;
+    left: 45px;
+    top: 75px;
+    margin-left: 16px;
+    background: none;
+    border: none;
+    color: transparent;
+}

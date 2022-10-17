@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +11,14 @@ export class HomeComponent implements OnInit {
   txtJb!: string;
   txtDev!: string;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.txtJb = 'Jean-Baptiste TOURNEZ';
     this.txtDev = 'Développeur Web :)';
     setTimeout(() => {
       this.typeWriterJb(this.txtJb, 0)
-    }, 800);
+    }, 1000);
   }
 
   typeWriterJb(word: any, index: any) {
@@ -46,8 +47,12 @@ export class HomeComponent implements OnInit {
       setTimeout(() => {
         title!.innerHTML = '';
         this.typeWriterJb(this.txtJb, 0);
-      }, 8000);
+      }, 6000);
     }
+  }
+
+  afficherDiplome() {
+    this.router.navigateByUrl('/diplome');
   }
 
 }

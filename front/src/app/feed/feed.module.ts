@@ -7,6 +7,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { GameComponent } from './components/game/game.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { Web3Component } from './components/web3/web3.component';
+import { DiplomeComponent } from './components/diplome/diplome.component';
 
 
 
@@ -18,6 +19,7 @@ import { Web3Component } from './components/web3/web3.component';
     GameComponent,
     FooterComponent,
     Web3Component,
+    DiplomeComponent,
   ],
 
   imports: [
@@ -31,6 +33,8 @@ import { Web3Component } from './components/web3/web3.component';
     ContactComponent,
     GameComponent,
     FooterComponent,
+    Web3Component,
+    DiplomeComponent,
   ]
 })
 export class FeedModule { }

@@ -11,7 +11,7 @@
         height: 30px;
         margin-right: 50px;
         animation: links 500ms both;
-        animation-delay: 3500ms;
+        animation-delay: 15500ms;
         &:hover {
             transform: scale(1.15);
         }
@@ -27,7 +27,7 @@
         margin-right: 50px;
         margin-left: 50px;
         animation: links 500ms both;
-        animation-delay: 3750ms;
+        animation-delay: 15750ms;
         &:hover {
             transform: scale(1.15);
         }
@@ -42,7 +42,7 @@
         height: 33px;
         margin-left: 50px;
         animation: links 500ms both;
-        animation-delay: 4000ms;
+        animation-delay: 16000ms;
         &:hover {
             transform: scale(1.15);
         }
@@ -51,6 +51,126 @@
             height: 100%;
             object-fit: cover;
             filter: drop-shadow(grey 2px 2px 4px);
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive tablette
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        .linkedin {
+            height: 30px;
+            margin-right: 50px;
+            animation: links 500ms both;
+            animation-delay: 5500ms;
+            &:hover {
+                transform: scale(1.15);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: drop-shadow(grey 2px 2px 4px);
+            }
+        }
+        .github {
+            height: 60px;
+            margin-right: 50px;
+            margin-left: 50px;
+            animation: links 500ms both;
+            animation-delay: 5750ms;
+            &:hover {
+                transform: scale(1.15);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: drop-shadow(grey 2px 2px 4px);
+            }
+        }
+        .youtube {
+            height: 33px;
+            margin-left: 50px;
+            animation: links 500ms both;
+            animation-delay: 6000ms;
+            &:hover {
+                transform: scale(1.15);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: drop-shadow(grey 2px 2px 4px);
+            }
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive mobile
+@media all and (max-width: 767px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: center;
+        .linkedin {
+            height: 20px;
+            margin-right: 15px;
+            animation: links 500ms both;
+            animation-delay: 500ms;
+            &:hover {
+                transform: scale(1.15);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: drop-shadow(grey 2px 2px 4px);
+            }
+        }
+        .github {
+            height: 50px;
+            margin-right: 15px;
+            margin-left: 15px;
+            animation: links 500ms both;
+            animation-delay: 750ms;
+            &:hover {
+                transform: scale(1.15);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: drop-shadow(grey 2px 2px 4px);
+            }
+        }
+        .youtube {
+            height: 25px;
+            margin-left: 15px;
+            animation: links 500ms both;
+            animation-delay: 1000ms;
+            &:hover {
+                transform: scale(1.15);
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: drop-shadow(grey 2px 2px 4px);
+            }
         }
     }
 }

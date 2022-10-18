@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=Roboto&display=swap');
-@import "/src/assets/anim/cursor.scss", "/src/assets/anim/diplome.scss", "/src/assets/anim/cordon.scss", "/src/assets/anim/apparition.scss";
+@import "/src/assets/anim/cursor.scss", "/src/assets/anim/diplome.scss", "/src/assets/anim/cordon.scss", "/src/assets/anim/apparition.scss", "/src/assets/anim/light.scss";
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -63,24 +63,122 @@
         height: 100%;
         box-shadow: black 4px 4px 10px;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-between;
-        background: rgba(25,84,123,0.35);
+        justify-content: space-around;
+        background: rgba(25,84,123,0.05);
         border: black solid 2px;
         .container-diplome {
-            width: 40%;
-            height: 100%;
+            width: 25%;
+            height: 85%;
             display: flex;
             flex-flow: column;
             align-items: center;
-            justify-content: flex-start;
-            margin-right: 30px;
-            .cordon {
-                margin-bottom: -5px;
-                animation: cordon 3.5s both;
+            justify-content: space-between;
+            .cordon-diplome {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: flex-start;
+                .cordon {
+                    margin-bottom: -5px;
+                    animation: cordon 2s both;
+                    animation-delay: 1000ms;
+                }
+                .diplome {
+                    animation: diplome 2s both;
+                    animation-delay: 1000ms;
+                }
             }
-            .diplome {
-                animation: diplome 3.5s both;
+            .angular {
+                animation: apparition 500ms both;
+                animation-delay: 6500ms;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    filter: drop-shadow(whitesmoke 4px 4px 4px);
+                }
+            }
+        }
+        .personal {
+            width: 65%;
+            height: 85%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bolder;
+            filter: drop-shadow(whitesmoke 2px 2px 4px);
+            .name {
+                animation: apparition 500ms both;
+                animation-delay: 250ms;
+            }
+            .dev {
+                animation: apparition 500ms both;
+                animation-delay: 1000ms;
+            }
+            .full {
+                .premier {
+                    animation: apparition 500ms both;
+                    animation-delay: 3750ms;
+                }
+                .deuxieme {
+                    animation: apparition 500ms both;
+                    animation-delay: 6500ms;
+                }
+                .troisieme {
+                    animation: apparition 500ms both;
+                    animation-delay: 9000ms;
+                }
+            }
+            .hobbies {
+                .first {
+                    animation: apparition 500ms both;
+                    animation-delay: 11000ms;
+                }
+                .second {
+                    animation: apparition 500ms both;
+                    animation-delay: 12500ms;
+                }
+                .third {
+                    display: none;
+                }
+            }
+            .contact {
+                animation: apparition 500ms both;
+                animation-delay: 15000ms;
+            }
+        }
+        .logos {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+            justify-content: space-around;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                filter: drop-shadow(whitesmoke 4px 4px 4px);
+                animation: apparition 250ms both;
+            }
+            .html {
+                animation-delay: 4500ms;
+            }
+            .css {
+                animation-delay: 4600ms;
+            }
+            .js {
+                animation-delay: 4700ms;
+            }
+            .node {
+                animation-delay: 4800ms;
+            }
+            .express {
+                animation-delay: 4900ms;
+            }
+            .nodemon {
+                animation-delay: 5000ms;
             }
         }
     }
@@ -95,8 +193,10 @@
             width: 100%;
             height: 20%;
             box-shadow: black 4px 4px 10px;
-            background: rgba(25,84,123,0.35);
+            background: rgba(25,84,123,0.15);
             border: black solid 2px;
+            animation: apparition 250ms both;
+            animation-delay: 15000ms;
             &:hover {
                 transform: scale(1.05);
                 background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
@@ -109,10 +209,16 @@
             flex-flow: column;
             justify-content: center;
             box-shadow: black 4px 4px 10px;
-            background: rgba(25,84,123,0.25);
+            background: rgba(25,84,123,0.05);
             border: black solid 2px;
+            animation: apparition 250ms both;
+            animation-delay: 12500ms;
             &:hover {
-                background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
+                p {
+                    color: whitesmoke;
+                    filter: drop-shadow(black 4px 4px 4px);
+                    transform: scale(1.05);
+                }
             }
             h2 {
                 font-family: 'Silkscreen', sans-serif;
@@ -144,18 +250,411 @@
         align-items: center;
         justify-content: center;
         box-shadow: black 4px 4px 10px;
-        animation: apparition 750ms both;
-        animation-delay: 500ms;
         background: rgba(255,216,155,0.1);
         border: black solid 2px;
+        animation: apparition 250ms both;
+        animation-delay: 9s;
     }
     .link {
         width: 65%;
         height: 40px;
         box-shadow: black 4px 4px 10px;
-        animation: apparition 750ms both;
-        animation-delay: 500ms;
         background: rgba(255,216,155,0.1);
         border: black solid 2px;
+        animation: apparition 250ms both;
+        animation-delay: 15000ms;
     }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive tablette
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .page {
+        height: 1200px;
+    }
+    .container {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        width: 98%;
+        height: 1100px;
+        margin: 15px 0px;
+        .competences {
+            width: 100%;
+            height: 50%;
+            box-shadow: black 4px 4px 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            background: rgba(25,84,123,0.05);
+            border: black solid 2px;
+            .container-diplome {
+                width: 25%;
+                height: 85%;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: space-between;
+                .cordon-diplome {
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    .cordon {
+                        margin-bottom: -5px;
+                        animation: cordon 2s both;
+                        animation-delay: 1000ms;
+                    }
+                    .diplome {
+                        animation: diplome 2s both;
+                        animation-delay: 1000ms;
+                    }
+                }
+                .angular {
+                    animation: apparition 500ms both;
+                    animation-delay: 3500ms;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        filter: drop-shadow(whitesmoke 4px 4px 4px);
+                    }
+                }
+            }
+            .personal {
+                width: 65%;
+                height: 85%;
+                text-align: center;
+                font-size: 20px;
+                font-weight: bolder;
+                filter: drop-shadow(whitesmoke 2px 2px 4px);
+                .name {
+                    animation: none;
+                }
+                .dev {
+                    animation: none;
+                }
+                .full {
+                    .premier {
+                        animation: none;
+                    }
+                    .deuxieme {
+                        animation: none;
+                    }
+                    .troisieme {
+                        animation: none;
+                    }
+                }
+                .hobbies {
+                    .first {
+                        animation: none;
+                    }
+                    .second {
+                        animation: none;
+                    }
+                    .third {
+                        display: none;
+                    }
+                }
+                .contact {
+                    animation: none;
+                }
+            }
+            .logos {
+                width: 100%;
+                height: 10%;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: space-around;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    filter: drop-shadow(whitesmoke 4px 4px 4px);
+                    animation: apparition 250ms both;
+                }
+                .html {
+                    animation-delay: 4500ms;
+                }
+                .css {
+                    animation-delay: 4600ms;
+                }
+                .js {
+                    animation-delay: 4700ms;
+                }
+                .node {
+                    animation-delay: 4800ms;
+                }
+                .express {
+                    animation-delay: 4900ms;
+                }
+                .nodemon {
+                    animation-delay: 5000ms;
+                }
+            }
+        }
+        .mail-game {
+            width: 100%;
+            height: 50%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            margin: 15px 0px;
+            .mail {
+                text-align: center;
+                width: 100%;
+                height: 20%;
+                box-shadow: black 4px 4px 10px;
+                background: rgba(25,84,123,0.15);
+                border: black solid 2px;
+                animation: none;
+                &:hover {
+                    background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
+                }
+            }
+            .game {
+                width: 100%;
+                height: 76%;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                box-shadow: black 4px 4px 10px;
+                background: rgba(25,84,123,0.05);
+                border: black solid 2px;
+                animation: none;
+                &:hover {
+                    p {
+                        color: whitesmoke;
+                        filter: drop-shadow(black 4px 4px 4px);
+                        transform: scale(1.05);
+                    }
+                }
+                h2 {
+                    font-family: 'Silkscreen', sans-serif;
+                    font-size: 32px;
+                    text-align: center;
+                    margin-top: 0;
+                    margin-bottom: 15px;
+                }
+                p {
+                    text-align: center;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    .footer {
+        width: 98%;
+        height: 40px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+        .web3 {
+            display: none;
+        }
+        .link {
+            width: 100%;
+            height: 40px;
+            box-shadow: black 4px 4px 10px;
+            background: rgba(255,216,155,0.1);
+            border: black solid 2px;
+            animation: apparition 250ms both;
+            animation-delay: 5000ms;
+        }
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive mobile
+@media all and (max-width: 767px) {
+    .page {
+        width: 98%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header {
+        width: 98%;
+        height: 100px;
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        border: black solid 2px;
+        box-shadow: black 4px 4px 10px;
+        background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
+        margin-bottom: 25px;
+        .devWeb {
+            width: 100%;
+            text-align: center;
+            h1 {
+                font-family: 'Silkscreen', sans-serif;
+                font-size: 16px;
+                color: black;
+                display: inline-block;
+                position: relative;
+            }
+            h1::after {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 5px;
+                background: black;
+                right: -5px;
+                top: 0;
+                animation: cursor 1s infinite;
+            }
+        }
+        .foto {
+            width: 100px;
+            height: 101%;
+            opacity: 0.85;
+            margin-right: -1px;
+        }
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        width: 98%;
+        height: 750px;
+        margin-bottom: 25px;
+        .competences {
+            width: 100%;
+            height: 90%;
+            box-shadow: black 4px 4px 10px;
+            display: flex;
+            flex-flow: column-reverse;
+            align-items: center;
+            justify-content: space-around;
+            background: rgba(25,84,123,0.05);
+            border: black solid 2px;
+            margin-bottom: 25px;
+            .container-diplome {
+                width: 65%;
+                max-width: 315px;
+                height: 65%;
+                .cordon-diplome {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .cordon {
+                        display: none;
+                    }
+                    .diplome {
+                        animation: none;
+                    }
+                }
+                .angular {
+                    width: 50%;
+                    animation: none;
+                }
+            }
+            .personal {
+                width: 90%;
+                height: 85%;
+                text-align: center;
+                font-size: 13px;
+                font-weight: bolder;
+                filter: drop-shadow(whitesmoke 2px 2px 4px);
+                .name {
+                    animation: none;
+                }
+                .dev {
+                    animation: none;
+                }
+                .full {
+                    .premier {
+                        animation: none;
+                    }
+                    .deuxieme {
+                        animation: none;
+                    }
+                    .troisieme {
+                        animation: none;
+                    }
+                }
+                .hobbies {
+                    .first {
+                        animation: none;
+                    }
+                    .second {
+                        animation: none;
+                    }
+                    .third {
+                        display: contents;
+                    }
+                }
+                .contact {
+                    animation: none;
+                }
+            }
+            .logos {
+                width: 11%;
+                max-width: 50px;
+                height: 10%;
+                display: flex;
+                flex-flow: row;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 15px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    filter: none;
+                    animation: none;
+                }
+            }
+        }
+        .mail-game {
+            width: 98%;
+            height: 20%;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            .mail {
+                text-align: center;
+                width: 100%;
+                height: 100%;
+                box-shadow: black 4px 4px 10px;
+                background: rgba(25,84,123,0.15);
+                border: black solid 2px;
+                animation: none;
+            }
+            .game {
+                display: none;
+            }
+        }
+    }
+    
+    .footer {
+        width: 98%;
+        height: 100px;
+        display: flex;
+        flex-flow: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+        .web3 {
+            display: none;
+        }
+        .link {
+            width: 100%;
+            box-shadow: black 4px 4px 10px;
+            background: rgba(255,216,155,0.1);
+            border: black solid 2px;
+            animation: none;
+            margin-bottom: 25px;
+        }
+    }
+    
 }

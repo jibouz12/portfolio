@@ -9,9 +9,31 @@
     display: flex;
     flex-flow: column;
     justify-content: center;
+    animation: light 1000ms both;
+    animation-delay: 16500ms;
     h2 {
         font-family: 'Silkscreen', sans-serif;
         font-size: 32px;
         margin: 0;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive tablette
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .container {
+        animation: light 1000ms both;
+        animation-delay: 6500ms;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive mobile
+@media all and (max-width: 767px) {
+    .container {
+        animation: light 1000ms both;
+        animation-delay: 3500ms;
     }
 }

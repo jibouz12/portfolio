@@ -47,7 +47,7 @@ export class HomeComponent implements OnInit {
       setTimeout(() => {
         title!.innerHTML = '';
         this.typeWriterJb(this.txtJb, 0);
-      }, 6000);
+      }, 4000);
     }
   }
 

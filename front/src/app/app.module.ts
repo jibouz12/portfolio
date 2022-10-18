@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FeedModule } from './feed/feed.module';
+import { NgxGoogleAnalyticsModule, NgxGoogleAnalyticsRouterModule } from 'ngx-google-analytics';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,8 @@ import { FeedModule } from './feed/feed.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxGoogleAnalyticsModule.forRoot('G-0XN66G08G2'),
+    NgxGoogleAnalyticsRouterModule,
     FeedModule,
   ],
   providers: [],

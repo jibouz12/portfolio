@@ -1,0 +1,25 @@
+@keyframes light {
+    0% {}
+    12% {
+        background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
+    }
+    25% {
+        background-image: none;
+    }
+    37% {
+        background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
+    }
+    50% {
+        background-image: none;
+    }
+    67% {
+        background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
+    }
+    75% {
+        background-image: none;
+    }
+    87% {
+        background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
+    }
+    100% {}
+}

@@ -269,16 +269,16 @@
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 /// responsive tablette
-@media all and (min-width: 768px) and (max-width: 991px) {
+@media all and (min-width: 620px) and (max-width: 1400px) {
     .page {
-        height: 1200px;
+        height: 1500px;
     }
     .container {
         display: flex;
         flex-flow: column;
         justify-content: space-around;
         width: 98%;
-        height: 1100px;
+        height: 1400px;
         margin: 15px 0px;
         .competences {
             width: 100%;
@@ -472,7 +472,7 @@
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 /// responsive mobile
-@media all and (max-width: 767px) {
+@media all and (max-width: 619px) {
     .page {
         width: 98%;
         height: 100%;

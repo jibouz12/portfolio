@@ -435,8 +435,8 @@
                 background: rgba(25,84,123,0.15);
                 border: black solid 2px;
                 animation: none;
-                margin-top: 10px;
-                margin-bottom: 10px;
+                margin-top: 25px;
+                margin-bottom: 50px;
                 &:hover {
                     background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
                     transform: none;
@@ -448,9 +448,9 @@
                 display: flex;
                 flex-flow: column;
                 justify-content: center;
-                box-shadow: black 4px 4px 10px;
-                background: rgba(25,84,123,0.05);
-                border: black solid 2px;
+                box-shadow: none;
+                background: none;
+                border: none;
                 animation: none;
                 h2, p {
                     display: none;
@@ -613,8 +613,7 @@
                 }
             }
             .logos {
-                width: 8%;
-                max-width: 40px;
+                width: 90%;
                 height: 8%;
                 display: flex;
                 flex-flow: row;
@@ -623,6 +622,7 @@
                 margin-top: 15px;
                 img {
                     width: 100%;
+                    max-width: 40px;
                     height: 100%;
                     object-fit: contain;
                     filter: none;

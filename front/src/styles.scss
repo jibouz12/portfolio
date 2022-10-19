@@ -1,4 +1,9 @@
+html {
+    height: 100%;
+}
+
 body {
+    height: 96%;
     background: linear-gradient(90deg, rgba(255,216,155,0.5), rgba(25,84,123,0.5));
 }
 
@@ -13,5 +18,23 @@ a {
     }
     &:visited {
         color: black;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive mobile
+@media all and (max-width: 619px) {
+    body {
+        height: 100%;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive mobile mode paysage
+@media (orientation: landscape) and (max-width: 900px) {
+    body {
+        background: black;
     }
 }

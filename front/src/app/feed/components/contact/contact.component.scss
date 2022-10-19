@@ -10,7 +10,7 @@
     flex-flow: column;
     justify-content: center;
     animation: light 1000ms both;
-    animation-delay: 16500ms;
+    animation-delay: 7500ms;
     h2 {
         font-family: 'Silkscreen', sans-serif;
         font-size: 32px;
@@ -21,7 +21,7 @@
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 /// responsive tablette
-@media all and (min-width: 620px) and (max-width: 1400px) {
+@media all and (min-width: 620px) and (max-width: 966px) {
     .container {
         animation: light 1000ms both;
         animation-delay: 6500ms;
@@ -34,6 +34,12 @@
 @media all and (max-width: 619px) {
     .container {
         animation: light 1000ms both;
-        animation-delay: 3500ms;
+        animation-delay: 1250ms;
+        h2 {
+            display: none;
+        }
+        p {
+            font-size: 12px;
+        }
     }
 }

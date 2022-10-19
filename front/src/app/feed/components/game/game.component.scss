@@ -1,9 +1,8 @@
 @import '/src/assets/anim/animation1.scss','/src/assets/anim/animation2.scss', '/src/assets/anim/animation3.scss', '/src/assets/anim/animation4.scss', '/src/assets/anim/animation5.scss', '/src/assets/anim/animation6.scss', '/src/assets/anim/animation7.scss', '/src/assets/anim/animation8.scss', '/src/assets/anim/animation9.scss';
 
 .ecran {
-    width: 425px;
-    height: 239px;
-    margin: 0px auto 10px auto;
+    width: 423px;
+    height: 237px;
 }
 
 .principal {
@@ -13,7 +12,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-image: url('/assets/Plan\ de\ travail\ 1.png');
-    border: black solid 2px;
+    border: black solid 3px;
     box-shadow: black 4px 4px 10px;
 }
 
@@ -99,4 +98,32 @@
     background: none;
     border: none;
     color: transparent;
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive petits pc
+@media all and (min-width: 967px) and (max-width: 1449px) {
+    .ecran {
+        margin-bottom: 10px;
+        transform: scale(0.65);
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive tablette
+@media all and (min-width: 620px) and (max-width: 966px) {
+    .ecran {
+        margin-bottom: 10px;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive mobile mode paysage
+@media (orientation: landscape) and (max-width: 966px) {
+    .ecran {
+        transform: scale(1.35);
+    }
 }

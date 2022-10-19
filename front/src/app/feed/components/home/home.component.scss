@@ -7,7 +7,7 @@
 
 .page {
     width: 100%;
-    height: 690px;
+    height: 100%;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -57,7 +57,7 @@
     flex-flow: row;
     justify-content: space-between;
     width: 98%;
-    height: 500px;
+    height: 73%;
     .competences {
         width: 67%;
         height: 100%;
@@ -83,16 +83,16 @@
                 .cordon {
                     margin-bottom: -5px;
                     animation: cordon 2s both;
-                    animation-delay: 1000ms;
+                    animation-delay: 1500ms;
                 }
                 .diplome {
                     animation: diplome 2s both;
-                    animation-delay: 1000ms;
+                    animation-delay: 1500ms;
                 }
             }
             .angular {
                 animation: apparition 500ms both;
-                animation-delay: 6500ms;
+                animation-delay: 4000ms;
                 img {
                     width: 100%;
                     height: 100%;
@@ -119,25 +119,25 @@
             .full {
                 .premier {
                     animation: apparition 500ms both;
-                    animation-delay: 3750ms;
+                    animation-delay: 1500ms;
                 }
                 .deuxieme {
                     animation: apparition 500ms both;
-                    animation-delay: 6500ms;
+                    animation-delay: 2000ms;
                 }
                 .troisieme {
                     animation: apparition 500ms both;
-                    animation-delay: 9000ms;
+                    animation-delay: 2500ms;
                 }
             }
             .hobbies {
                 .first {
                     animation: apparition 500ms both;
-                    animation-delay: 11000ms;
+                    animation-delay: 3000ms;
                 }
                 .second {
                     animation: apparition 500ms both;
-                    animation-delay: 12500ms;
+                    animation-delay: 3500ms;
                 }
                 .third {
                     display: none;
@@ -145,7 +145,7 @@
             }
             .contact {
                 animation: apparition 500ms both;
-                animation-delay: 15000ms;
+                animation-delay: 4000ms;
             }
         }
         .logos {
@@ -177,7 +177,7 @@
             .express {
                 animation-delay: 4900ms;
             }
-            .nodemon {
+            .mongo {
                 animation-delay: 5000ms;
             }
         }
@@ -196,7 +196,7 @@
             background: rgba(25,84,123,0.15);
             border: black solid 2px;
             animation: apparition 250ms both;
-            animation-delay: 15000ms;
+            animation-delay: 6000ms;
             &:hover {
                 transform: scale(1.05);
                 background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
@@ -208,11 +208,12 @@
             display: flex;
             flex-flow: column;
             justify-content: center;
+            align-items: center;
             box-shadow: black 4px 4px 10px;
             background: rgba(25,84,123,0.05);
             border: black solid 2px;
             animation: apparition 250ms both;
-            animation-delay: 12500ms;
+            animation-delay: 5500ms;
             &:hover {
                 p {
                     color: whitesmoke;
@@ -253,7 +254,7 @@
         background: rgba(255,216,155,0.1);
         border: black solid 2px;
         animation: apparition 250ms both;
-        animation-delay: 9s;
+        animation-delay: 250ms;
     }
     .link {
         width: 65%;
@@ -262,27 +263,51 @@
         background: rgba(255,216,155,0.1);
         border: black solid 2px;
         animation: apparition 250ms both;
-        animation-delay: 15000ms;
+        animation-delay: 250ms;
+    }
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive petits pc
+@media all and (min-width: 967px) and (max-width: 1449px) {
+    .container {
+        .competences {
+            .personal {
+                font-size: 16px;
+            }
+        }
+        .mail-game {
+            .game {
+                align-items: center;
+            }
+        }
+    }
+    .footer {
+        .web3 {
+            font-size: 16px;
+        }
     }
 }
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 /// responsive tablette
-@media all and (min-width: 620px) and (max-width: 1400px) {
+@media all and (min-width: 620px) and (max-width: 966px) {
     .page {
-        height: 1500px;
+        height: 100%;
+        min-height: 1280px;
     }
     .container {
         display: flex;
         flex-flow: column;
         justify-content: space-around;
         width: 98%;
-        height: 1400px;
-        margin: 15px 0px;
+        height: 73%;
+        margin: 0px 0px;
         .competences {
             width: 100%;
-            height: 50%;
+            height: 65%;
             box-shadow: black 4px 4px 10px;
             display: flex;
             flex-wrap: wrap;
@@ -305,11 +330,11 @@
                     .cordon {
                         margin-bottom: -5px;
                         animation: cordon 2s both;
-                        animation-delay: 1000ms;
+                        animation-delay: 1500ms;
                     }
                     .diplome {
                         animation: diplome 2s both;
-                        animation-delay: 1000ms;
+                        animation-delay: 1500ms;
                     }
                 }
                 .angular {
@@ -325,7 +350,7 @@
             }
             .personal {
                 width: 65%;
-                height: 85%;
+                height: 75%;
                 text-align: center;
                 font-size: 20px;
                 font-weight: bolder;
@@ -391,33 +416,35 @@
                 .express {
                     animation-delay: 4900ms;
                 }
-                .nodemon {
+                .mongo {
                     animation-delay: 5000ms;
                 }
             }
         }
         .mail-game {
             width: 100%;
-            height: 50%;
+            height: 100%;
             display: flex;
             flex-flow: column;
             justify-content: space-between;
-            margin: 15px 0px;
             .mail {
                 text-align: center;
                 width: 100%;
-                height: 20%;
+                height: 25%;
                 box-shadow: black 4px 4px 10px;
                 background: rgba(25,84,123,0.15);
                 border: black solid 2px;
                 animation: none;
+                margin-top: 10px;
+                margin-bottom: 10px;
                 &:hover {
                     background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
+                    transform: none;
                 }
             }
             .game {
                 width: 100%;
-                height: 76%;
+                height: 75%;
                 display: flex;
                 flex-flow: column;
                 justify-content: center;
@@ -425,23 +452,8 @@
                 background: rgba(25,84,123,0.05);
                 border: black solid 2px;
                 animation: none;
-                &:hover {
-                    p {
-                        color: whitesmoke;
-                        filter: drop-shadow(black 4px 4px 4px);
-                        transform: scale(1.05);
-                    }
-                }
-                h2 {
-                    font-family: 'Silkscreen', sans-serif;
-                    font-size: 32px;
-                    text-align: center;
-                    margin-top: 0;
-                    margin-bottom: 15px;
-                }
-                p {
-                    text-align: center;
-                    font-size: 14px;
+                h2, p {
+                    display: none;
                 }
             }
         }
@@ -463,8 +475,7 @@
             box-shadow: black 4px 4px 10px;
             background: rgba(255,216,155,0.1);
             border: black solid 2px;
-            animation: apparition 250ms both;
-            animation-delay: 5000ms;
+            animation: none;
         }
     }
 }
@@ -491,7 +502,8 @@
         border: black solid 2px;
         box-shadow: black 4px 4px 10px;
         background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
-        margin-bottom: 25px;
+        margin-bottom: 15px;
+        margin-top: 15px;
         .devWeb {
             width: 100%;
             text-align: center;
@@ -526,8 +538,8 @@
         flex-flow: column;
         justify-content: space-around;
         width: 98%;
-        height: 750px;
-        margin-bottom: 25px;
+        height: 70%;
+        margin-bottom: 15px;
         .competences {
             width: 100%;
             height: 90%;
@@ -538,11 +550,12 @@
             justify-content: space-around;
             background: rgba(25,84,123,0.05);
             border: black solid 2px;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             .container-diplome {
-                width: 65%;
-                max-width: 315px;
-                height: 65%;
+                width: 35%;
+                max-width: 165px;
+                min-width: 140px;
+                height: 35%;
                 .cordon-diplome {
                     display: flex;
                     align-items: center;
@@ -555,16 +568,17 @@
                     }
                 }
                 .angular {
-                    width: 50%;
-                    animation: none;
+                    display: none;
                 }
             }
             .personal {
                 width: 90%;
-                height: 85%;
+                height: 60%;
+                display: flex;
+                flex-flow: column;
                 text-align: center;
-                font-size: 13px;
-                font-weight: bolder;
+                justify-content: center;
+                font-size: 10px;
                 filter: drop-shadow(whitesmoke 2px 2px 4px);
                 .name {
                     animation: none;
@@ -580,12 +594,12 @@
                         animation: none;
                     }
                     .troisieme {
-                        animation: none;
+                        display: none;
                     }
                 }
                 .hobbies {
                     .first {
-                        animation: none;
+                        display: none;
                     }
                     .second {
                         animation: none;
@@ -599,9 +613,9 @@
                 }
             }
             .logos {
-                width: 11%;
-                max-width: 50px;
-                height: 10%;
+                width: 8%;
+                max-width: 40px;
+                height: 8%;
                 display: flex;
                 flex-flow: row;
                 align-items: center;
@@ -618,7 +632,7 @@
         }
         .mail-game {
             width: 98%;
-            height: 20%;
+            height: 7%;
             display: flex;
             flex-flow: column;
             justify-content: space-between;
@@ -630,6 +644,10 @@
                 background: rgba(25,84,123,0.15);
                 border: black solid 2px;
                 animation: none;
+                &:hover {
+                    background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
+                    transform: none;
+                }
             }
             .game {
                 display: none;
@@ -658,3 +676,63 @@
     }
     
 }
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+/// responsive mobile mode paysage
+@media (orientation: landscape) and (max-width: 900px) {
+    .page {
+        width: 98%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .header {
+        display: none;
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        width: 98%;
+        height: 100%;
+        margin-bottom: 25px;
+        .competences {
+            display: none;
+        }
+        .mail-game {
+            width: 98%;
+            height: 100%;
+            display: flex;
+            justify-content: flex-start;
+            .mail {
+                display: none;
+            }
+            .game {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                animation: none;
+                border: none;
+                box-shadow: none;
+                background: none;
+                padding: 50px 0px 0px 5px;
+                h2, p {
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .footer {
+        display: none;
+    }
+    
+}
+

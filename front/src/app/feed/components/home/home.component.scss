@@ -195,8 +195,6 @@
             box-shadow: black 4px 4px 10px;
             background: rgba(25,84,123,0.15);
             border: black solid 2px;
-            animation: apparition 250ms both;
-            animation-delay: 6000ms;
             &:hover {
                 transform: scale(1.05);
                 background-image: linear-gradient(to right bottom, #f1f1f1, #9b9b9b);
@@ -212,8 +210,6 @@
             box-shadow: black 4px 4px 10px;
             background: rgba(25,84,123,0.05);
             border: black solid 2px;
-            animation: apparition 250ms both;
-            animation-delay: 5500ms;
             &:hover {
                 p {
                     color: whitesmoke;
@@ -231,6 +227,10 @@
             p {
                 text-align: center;
                 font-size: 14px;
+            }
+            .jeu {
+                width: 423px;
+                height: 237px;
             }
         }
     }
@@ -270,7 +270,7 @@
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 /// responsive petits pc
-@media all and (min-width: 967px) and (max-width: 1449px) {
+@media all and (min-width: 901px) and (max-width: 1449px) {
     .container {
         .competences {
             .personal {
@@ -293,7 +293,7 @@
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 /// responsive tablette
-@media all and (min-width: 620px) and (max-width: 966px) {
+@media all and (min-width: 620px) and (max-width: 966px) and (min-height: 1000px) {
     .page {
         height: 100%;
         min-height: 1280px;
@@ -482,10 +482,71 @@
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
+/// responsive mobile mode paysage
+@media (orientation: landscape) and (max-width: 900px) {
+    .page {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .header {
+        display: none;
+    }
+    
+    .container {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        width: 98%;
+        height: 100%;
+        .competences {
+            display: none;
+        }
+        .mail-game {
+            width: 98%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            .mail {
+                display: none;
+            }
+            .game {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                animation: none;
+                border: none;
+                box-shadow: none;
+                background: none;
+                h2, p {
+                    display: none;
+                }
+                .jeu {
+                    width: 527px;
+                    height: 296px;
+                }
+            }
+        }
+    }
+    
+    .footer {
+        display: none;
+    }
+    
+}
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
 /// responsive mobile
 @media all and (max-width: 619px) {
     .page {
-        width: 98%;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-flow: column;
@@ -606,6 +667,7 @@
                     }
                     .third {
                         display: contents;
+                        color: #6A03E5;
                     }
                 }
                 .contact {
@@ -631,7 +693,7 @@
             }
         }
         .mail-game {
-            width: 98%;
+            width: 100%;
             height: 7%;
             display: flex;
             flex-flow: column;
@@ -673,66 +735,5 @@
             animation: none;
             margin-bottom: 25px;
         }
-    }
-    
+    }   
 }
-
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-/// responsive mobile mode paysage
-@media (orientation: landscape) and (max-width: 900px) {
-    .page {
-        width: 98%;
-        height: 100%;
-        display: flex;
-        flex-flow: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
-    
-    .header {
-        display: none;
-    }
-    
-    .container {
-        display: flex;
-        flex-flow: column;
-        justify-content: flex-start;
-        width: 98%;
-        height: 100%;
-        margin-bottom: 25px;
-        .competences {
-            display: none;
-        }
-        .mail-game {
-            width: 98%;
-            height: 100%;
-            display: flex;
-            justify-content: flex-start;
-            .mail {
-                display: none;
-            }
-            .game {
-                width: 100%;
-                height: 100%;
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                animation: none;
-                border: none;
-                box-shadow: none;
-                background: none;
-                padding: 50px 0px 0px 5px;
-                h2, p {
-                    display: none;
-                }
-            }
-        }
-    }
-    
-    .footer {
-        display: none;
-    }
-    
-}
-

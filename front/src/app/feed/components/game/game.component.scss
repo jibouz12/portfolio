@@ -1,8 +1,8 @@
 @import '/src/assets/anim/animation1.scss','/src/assets/anim/animation2.scss', '/src/assets/anim/animation3.scss', '/src/assets/anim/animation4.scss', '/src/assets/anim/animation5.scss', '/src/assets/anim/animation6.scss', '/src/assets/anim/animation7.scss', '/src/assets/anim/animation8.scss', '/src/assets/anim/animation9.scss';
 
 .ecran {
-    width: 423px;
-    height: 237px;
+    width: 100%;
+    height: 100%;
 }
 
 .principal {
@@ -13,7 +13,7 @@
     background-repeat: no-repeat;
     background-image: url('/assets/Plan\ de\ travail\ 1.png');
     border: black solid 3px;
-    box-shadow: black 4px 4px 10px;
+    box-shadow: black 4px 4px 18px;
 }
 
 .animation1 {
@@ -65,39 +65,78 @@
     display: none;
 }
 
-.pierre {
-    width: 60px;
-    height: 40px;
-    position: relative;
-    left: 45px;
-    top: 75px;
-    background: none;
-    border: none;
-    color: transparent;
-}
-
-.feuille {
-    width: 60px;
-    height: 40px;
-    position: relative;
-    left: 45px;
-    top: 75px;
-    margin-left: 12px;
-    background: none;
-    border: none;
-    color: transparent;
-}
-
-.ciseaux {
-    width: 62px;
-    height: 40px;
-    position: relative;
-    left: 45px;
-    top: 75px;
-    margin-left: 16px;
-    background: none;
-    border: none;
-    color: transparent;
+.container-boutons {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    .haut {
+        width: 100%;
+        height: 32%;
+        .first {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            p {
+                font-family: 'Silkscreen', sans-serif;
+                font-weight: bold;
+                font-size: 30px;
+                color: white;
+                background-color: black;
+                
+            }
+        }
+    }
+    .middle {
+        width: 100%;
+        height: 20%;
+        display: flex;
+        flex-flow: row;
+        .gauche {
+            width: 10%;
+            height: 100%;
+        }
+        .centre {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            opacity: 0.5;
+            .pierre {
+                width: 30%;
+                height: 100%;
+                background: none;
+                border: none;
+                color: transparent;
+            }
+            
+            .feuille {
+                width: 30%;
+                height: 100%;
+                background: none;
+                border: none;
+                color: transparent;
+            }
+            
+            .ciseaux {
+                width: 30%;
+                height: 100%;
+                background: none;
+                border: none;
+                color: transparent;
+            }
+        }
+        .droite {
+            width: 40%;
+            height: 100%;
+        }
+    }
+    .bas {
+        width: 100%;
+        height: 45%;
+    }
 }
 
 ///////////////////////////////////////////////////////////////////////
@@ -105,25 +144,16 @@
 /// responsive petits pc
 @media all and (min-width: 967px) and (max-width: 1449px) {
     .ecran {
-        margin-bottom: 10px;
-        transform: scale(0.65);
-    }
-}
-
-///////////////////////////////////////////////////////////////////////
-///////////////////////////////////////////////////////////////////////
-/// responsive tablette
-@media all and (min-width: 620px) and (max-width: 966px) {
-    .ecran {
-        margin-bottom: 10px;
+        transform: scale(0.7);
     }
 }
 
 ///////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 /// responsive mobile mode paysage
-@media (orientation: landscape) and (max-width: 966px) {
-    .ecran {
-        transform: scale(1.35);
+@media (orientation: landscape) and (max-width: 900px) {
+    .principal {
+        border: black solid 6px;
+        box-shadow: none;
     }
 }

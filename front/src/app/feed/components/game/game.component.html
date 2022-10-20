@@ -1,9 +1,21 @@
 <div class="ecran">
     <div class="principal">
         <div class="container-boutons">
-            <button (click)="play(1)" class="pierre">pierre</button>
-            <button (click)="play(2)" class="feuille">feuille</button>
-            <button (click)="play(3)" class="ciseaux">ciseaux</button>
+            <div class="haut">
+                <div class="first">
+                    <p id="rslt"></p>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="gauche"></div>
+                <div class="centre">
+                    <button (click)="play(1)" class="pierre">pierre</button>
+                    <button (click)="play(2)" class="feuille">feuille</button>
+                    <button (click)="play(3)" class="ciseaux">ciseaux</button>
+                </div>
+                <div class="droite"></div>
+            </div>
+            <div class="bas"></div>
         </div>
         <audio
             id="audio-1"
